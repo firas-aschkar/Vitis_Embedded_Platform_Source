@@ -42,7 +42,7 @@ The following table summarizes use cases of platforms build :
 
 The platform hardware has two types.
 
-- **Pre-Synth XSA** : Hardware specification file (XSA) in the platform does not contain bitstream. The XSA build time is quicker than Post-Impl XSA. By default, Vitis platform Makefile generates pre-synth platforms. Pre-Synth XSA is not valid for DFX platforms.
+- **Pre-Synth XSA** : Hardware specification file (XSA) if the platform does not contain bitstream. The XSA build time is quicker than Post-Impl XSA. By default, Vitis platform Makefile generates pre-synth platforms. Pre-Synth XSA is not valid for DFX platforms.
 - **Post-Impl XSA** : XSA generation flow goes through implementation. The XSA contains PL bitstream and the platform generation time will be longer. 
   - DFX platforms require post-impl XSA.
   - Flat platform doesn't require post-impl XSA. If flat platform creation flow generates post-impl XSA, user can get platform resource info in platforminfo. Implementation issues may be found in early stage. It won't save time during the application v++ link phase. V++ will rerun implementation for the whole design.
